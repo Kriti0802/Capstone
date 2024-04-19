@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());  
  
 // Connect to MongoDB using the connection string  
-const connectionString = 'mongodb://comos:06MgFrZIfjRNwKPTE3OgjnvACe8QzQaSsfERgQ2MfrzRcPdmKRRaaPmCVFZA5bSnghfcnz0tOXcLACDbn37tZg==@comos.mongo.cosmos.azure.com:10255/empdb?tlsInsecure=true&ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@comos@';  
+const connectionString =' '; //use cosmos mongo api connection string  
 mongoose.connect(connectionString, {  
   // useNewUrlParser: true,  
   // useUnifiedTopology: true,  
