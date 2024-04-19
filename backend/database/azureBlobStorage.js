@@ -1,8 +1,8 @@
 const { BlobServiceClient } = require('@azure/storage-blob');
 
 
-const connectionStrings = 'DefaultEndpointsProtocol=https;AccountName=kritistor;AccountKey=Ihn6PsGxj3nI7+R5F/2cduYyl25wwbZ/aWGm4UENDFN3q3PLeduqgcCt7t9ADz8qqe+vdUKivP2c+AStAKeh9w==;EndpointSuffix=core.windows.net';  
-const containerName = 'myblob';  
+const connectionStrings = ' '  //enter your blob connection string 
+const containerName = 'mblob';  
   
 const blobServiceClient = BlobServiceClient.fromConnectionString(connectionStrings);  
 const containerClient = blobServiceClient.getContainerClient(containerName); 
