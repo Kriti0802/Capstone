@@ -117,14 +117,9 @@ exports.enrollStudentInCourse= async (req, res) => {
     student.coursesEnrolled.push(course._id);
     await student.save();
     await course.save();
-    const email = course.trainerEmail;
-       // Send request to Logic App  
-      //  const logicAppUri = 'https://prod-12.eastus.logic.azure.com:443/workflows/2fcade5bfec54de9acf4c883f0be7b43/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=FHQB18fBhhn92AOA7kxJEMLXioUqZXB5EWXBIQX3fFo';  
-      //  await axios.post(logicAppUri, {  
-      //    courseId: courseId,  
-      //    studentEmail: studentEmail  
-      //  }); 
-    await fetch('https://prod-95.eastus.logic.azure.com:443/workflows/e1cdcb6794724c91962de1e0cb064f84/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=GpCmSDWCrTtD6XyisUiQte6kX1e8DB2-Biwui3eoZSY',{
+    const email = course.trainerEmail; 
+    // use azure logic app connection URL
+    await fetch('',{
       method:'POST',
       headers:{
         'Content-Type':'application/json'
